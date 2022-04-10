@@ -3,13 +3,13 @@ import java.time.LocalDate;
 
 public abstract class Securities {
 	private Double price;
-	private LocalDate dueDate;
-	private LocalDate buyDate;
+	private int dueDate;
+	private int buyDate;
 	StockTrend stockTrend;
 	RiskLevel riskLevel;
 	private String companyName;
 	
-	protected Securities(double price, LocalDate dueDate, LocalDate buyDate,
+	protected Securities(double price, int dueDate, int buyDate,
 					StockTrend stockTrend, RiskLevel riskLevel, String companyName) {
 		this.price = price;
 		this.dueDate = dueDate;
@@ -25,12 +25,12 @@ public abstract class Securities {
 	}
 
 
-	public LocalDate getDueDate() {
+	public int getDueDate() {
 		return dueDate;
 	}
 
 
-	public LocalDate getBuyDate() {
+	public int getBuyDate() {
 		return buyDate;
 	}
 
@@ -71,5 +71,18 @@ public abstract class Securities {
 		return 0d;
 		
 	}
+
+	
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Securities [price=" + price + ", dueDate=" + dueDate + ", buyDate=" + buyDate + ", stockTrend="
+				+ stockTrend + ", riskLevel=" + riskLevel + ", companyName=" + companyName + "]";
+	}
+	
 	
 }
