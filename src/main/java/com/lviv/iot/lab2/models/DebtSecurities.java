@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class DebtSecurities extends Securities{
 	DebtSecuritiesType debtSecuritiesType;
 	
-	public DebtSecurities(double price, LocalDate dueDate, LocalDate buyDate, 
+	public DebtSecurities(double price, int dueDate, int buyDate, 
 													StockTrend stockTrend, RiskLevel riskLevel,
 													String companyName, DebtSecuritiesType debtSecuritiesType) {
 		
