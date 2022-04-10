@@ -1,12 +1,12 @@
 package com.lviv.iot.lab2.Manager;
+import com.lviv.iot.lab2.models.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.lviv.iot.lab2.models.Securities;
-import com.lviv.iot.lab2.models.StockMarket;
+
 
 public class SecuritiesManager{
 	ArrayList<Securities> securitiesList;

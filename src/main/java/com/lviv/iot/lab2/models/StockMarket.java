@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StockMarket {
 	private String location;
-	private ArrayList<Securities> availiableSecurities = new ArrayList<>();
+	private ArrayList<Securities> availiableSecurities = new ArrayList<Securities>();
 	
 	public List<Securities> addSecurities(Securities s) {
 		availiableSecurities.add(s);
