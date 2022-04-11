@@ -1,4 +1,4 @@
-package com.iot.lviv.lab2;
+package com.lviv.iot.lab2;
 
 
 import com.lviv.iot.lab2.*;
