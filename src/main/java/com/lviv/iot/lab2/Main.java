@@ -1,6 +1,9 @@
 package com.lviv.iot.lab2;
 
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 import com.lviv.iot.lab2.*;
 import com.lviv.iot.lab2.Manager.SecuritiesManager;
 import com.lviv.iot.lab2.models.DebtSecurities;
@@ -13,7 +16,7 @@ import com.lviv.iot.lab2.models.StockTrend;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		
 	
 	DebtSecurities d1 = new DebtSecurities(10d, 2022, 2023, StockTrend.INCREASING, RiskLevel.HIGH, "Tesla", DebtSecuritiesType.BILLS);
@@ -38,9 +41,16 @@ public class Main {
 	securitiesManager.ascendingSortByCompanyName(stockMarket);
 	securitiesManager.descendingSortByCompanyName(stockMarket);
 	
-	
-	
-	
-	
+
+	writeCsv();
 }
+	public static void writeCsv() throws IOException /* throws IOException */ {
+        try (FileWriter writer = new FileWriter("result.csv")){
+            writer.write("column 1 , column 2");
+    }
+                //        } catch (IOException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+    }
 }

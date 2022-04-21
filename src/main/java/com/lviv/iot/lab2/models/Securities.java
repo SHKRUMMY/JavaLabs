@@ -49,40 +49,38 @@ public abstract class Securities {
 		return companyName;
 	}
 	
+	public String getHeaders() {
+		return "col 1, col 2, col3";
+	}
+
+
+//	public void setStockTrend(StockTrend stockTrend) {
+//		this.stockTrend = stockTrend;
+//	}
+//
+//
+//	public void setRiskLevel(RiskLevel riskLevel) {
+//		this.riskLevel = riskLevel;
+//	}
+//
+//
+//	public double sellSecurities() {
+//		return 0d;
+//		
+//	}
+//	
+//	public double buySecurities() {
+//		return 0d;
+//		
+//	}
+//
+//	
+//	public void setPrice(Double price) {
+//		this.price = price;
+//	}
+
+
 	
-
-
-	public void setStockTrend(StockTrend stockTrend) {
-		this.stockTrend = stockTrend;
-	}
-
-
-	public void setRiskLevel(RiskLevel riskLevel) {
-		this.riskLevel = riskLevel;
-	}
-
-
-	public double sellSecurities() {
-		return 0d;
-		
-	}
-	
-	public double buySecurities() {
-		return 0d;
-		
-	}
-
-	
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-
-
-	@Override
-	public String toString() {
-		return "Securities [price=" + price + ", dueDate=" + dueDate + ", buyDate=" + buyDate + ", stockTrend="
-				+ stockTrend + ", riskLevel=" + riskLevel + ", companyName=" + companyName + "]";
-	}
 	
 	
 }
