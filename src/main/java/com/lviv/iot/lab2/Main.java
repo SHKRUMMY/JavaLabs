@@ -41,16 +41,9 @@ public class Main {
 	securitiesManager.ascendingSortByCompanyName(stockMarket);
 	securitiesManager.descendingSortByCompanyName(stockMarket);
 	
-
-	writeCsv();
+	System.out.println("\n" + d1.Represent());
+	System.out.println("\n" + e1.Represent());
+	
 }
-	public static void writeCsv() throws IOException /* throws IOException */ {
-        try (FileWriter writer = new FileWriter("result.csv")){
-            writer.write("column 1 , column 2");
-    }
-                //        } catch (IOException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-    }
+
 }

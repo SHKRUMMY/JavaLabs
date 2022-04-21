@@ -19,6 +19,10 @@ public abstract class Securities {
 		this.companyName = companyName;
 		}
 	
+	public String Represent() {
+		return "[Price =" + price + ", Due Date =" + dueDate + ",Buy Date =" + buyDate + ", Stocke Trend =" + stockTrend + ", Risk Level = " + riskLevel +
+				" , Company Name =" + companyName;
+	}
 
 	public Double getPrice() {
 		return price;

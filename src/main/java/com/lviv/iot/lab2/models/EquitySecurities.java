@@ -57,5 +57,7 @@ public class EquitySecurities extends Securities {
 				+ "Stock Trend = " + stockTrend + "Company Name = " + this.getCompanyName() + "Equity Securities Type = " + 		
 	equitySecuritiesType + "Risk Level = " + riskLevel + "]";
 	}
-	
+	public String Represent() {
+		return super.Represent() + " Equity securities Type =" + equitySecuritiesType + "]";
+	}
 }

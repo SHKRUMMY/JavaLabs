@@ -51,5 +51,8 @@ public class DebtSecurities extends Securities{
 		DebtSecurities other = (DebtSecurities) obj;
 		return debtSecuritiesType == other.debtSecuritiesType;
 	}
+	public String Represent() {
+		return super.Represent() + " Debt securities Type =" + debtSecuritiesType + "]";
+	}
 	
 }
