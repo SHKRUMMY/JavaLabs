@@ -1,7 +1,7 @@
 package com.lviv.iot.lab2;
 
 
-import java.io.FileWriter;
+
 import java.io.IOException;
 
 import com.lviv.iot.lab2.*;
@@ -13,6 +13,7 @@ import com.lviv.iot.lab2.models.EquitySecuritiesType;
 import com.lviv.iot.lab2.models.RiskLevel;
 import com.lviv.iot.lab2.models.StockMarket;
 import com.lviv.iot.lab2.models.StockTrend;
+import com.lviv.iot.lab2.models.Writer;
 
 public class Main {
 
@@ -25,6 +26,7 @@ public class Main {
 	EquitySecurities e2 = new EquitySecurities(50d, 2022, 2023, StockTrend.DECREASING, RiskLevel.MEDIUM, "Mercedes", EquitySecuritiesType.SHARES);
 	
 	StockMarket stockMarket = new StockMarket();
+	Writer writer = new Writer();
 	
 	
 	stockMarket.addSecurities(d1);
@@ -44,6 +46,8 @@ public class Main {
 	System.out.println("\n" + d1.Represent());
 	System.out.println("\n" + e1.Represent());
 	
+	
+	writer.writeToFile(stockMarket.getAvailiableSecurities(), "Securities");
 }
 
 }

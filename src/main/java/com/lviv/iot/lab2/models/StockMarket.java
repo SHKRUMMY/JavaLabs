@@ -22,6 +22,11 @@ public class StockMarket {
 	
 	
 	
+public void setLocation(String location) {
+		this.location = location;
+	}
+
+
 public void showPrice() {
 		
 	}

@@ -1,5 +1,4 @@
 package com.lviv.iot.lab2.models;
-import java.time.LocalDate;
 import java.util.Objects;
 
 
@@ -54,5 +53,40 @@ public class DebtSecurities extends Securities{
 	public String Represent() {
 		return super.Represent() + " Debt securities Type =" + debtSecuritiesType + "]";
 	}
+	public String getHeaders() {
+		return super.getHeaders() + ";" + " Securities Type";
+	}
+	public String toCSV() {
+		return super.toCSV() + ";" + getDebtSecuritiesType();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

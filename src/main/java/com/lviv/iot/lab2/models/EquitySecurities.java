@@ -60,4 +60,38 @@ public class EquitySecurities extends Securities {
 	public String Represent() {
 		return super.Represent() + " Equity securities Type =" + equitySecuritiesType + "]";
 	}
+	
+	public String getHeaders() {
+		return super.getHeaders() + ";" + " Securities Type";
+	}
+	
+	public String toCSV() {
+		return super.toCSV() + ";" + getEquitySecuritiesType();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

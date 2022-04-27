@@ -53,10 +53,7 @@ public abstract class Securities {
 		return companyName;
 	}
 	
-	public String getHeaders() {
-		return "col 1, col 2, col3";
-	}
-
+	
 
 //	public void setStockTrend(StockTrend stockTrend) {
 //		this.stockTrend = stockTrend;
@@ -85,6 +82,43 @@ public abstract class Securities {
 
 
 	
+	public String getHeaders() {
+		return "price	;  dueDate	;  buyDate	; stockTrend	;  riskLevel	;  companyName	";
+	}
+	
+	public String toCSV() {
+		return String.format("%f; %d; %d; %s; %s; %s", getPrice(), getDueDate(), getBuyDate(), getStockTrend(), getRiskLevel(), getCompanyName());
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
+
