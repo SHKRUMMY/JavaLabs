@@ -1,6 +1,4 @@
 # JavaLabs
-Перетворити проект з кодом 2-3 роботи таким чином, щоб його збірку можна було виконувати з-за допомогою  maven. 
-При цьому варто зробити команду merge попередніх робіт в master
-Важливо: збірку проекту слід виконувати з консолі командою mvn clean package
-
-Згенерувати pom.xml можна з використанням команди maven (слід виконувати з консолі)
+For the Lab5 write unit test with coverage more or equal to 80%.
+For Lab6 create a Writer class to write CSV files based on fields of java classes.
+Test Function Writer.writeToFile()
