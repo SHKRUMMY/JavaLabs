@@ -1,3 +1,4 @@
+package Tests;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,15 +17,19 @@ import com.lviv.iot.lab2.models.StockTrend;
 public class BaseSecuritiesTest {
 	protected StockMarket testStockMarket = new StockMarket();
 	protected SecuritiesManager securitiesManager = new SecuritiesManager();
-	
+
 	@BeforeEach
-	public void createSecurities(){
-		
-		testStockMarket.addSecurities(new DebtSecurities(10d, 2022, 2023, StockTrend.INCREASING, RiskLevel.HIGH, "Tesla", DebtSecuritiesType.BILLS));
-		testStockMarket.addSecurities(new DebtSecurities(5d, 2022, 2023, StockTrend.DECREASING, RiskLevel.VERYHIGH, "Apple", DebtSecuritiesType.OBLIGATIONS));
-		testStockMarket.addSecurities(new EquitySecurities(100d, 2022, 2023, StockTrend.INCREASING, RiskLevel.LOW, "Samsung", EquitySecuritiesType.SERTIFICATES));
-		testStockMarket.addSecurities(new EquitySecurities(50d, 2022, 2023, StockTrend.DECREASING, RiskLevel.MEDIUM, "Mercedes", EquitySecuritiesType.SHARES));
-		
-}
+	public void createSecurities() {
+
+		testStockMarket.addSecurities(new DebtSecurities(10d, 2022, 2023, StockTrend.INCREASING, RiskLevel.HIGH,
+				"Tesla", DebtSecuritiesType.BILLS));
+		testStockMarket.addSecurities(new DebtSecurities(5d, 2022, 2023, StockTrend.DECREASING, RiskLevel.VERYHIGH,
+				"Apple", DebtSecuritiesType.OBLIGATIONS));
+		testStockMarket.addSecurities(new EquitySecurities(100d, 2022, 2023, StockTrend.INCREASING, RiskLevel.LOW,
+				"Samsung", EquitySecuritiesType.SERTIFICATES));
+		testStockMarket.addSecurities(new EquitySecurities(50d, 2022, 2023, StockTrend.DECREASING, RiskLevel.MEDIUM,
+				"Mercedes", EquitySecuritiesType.SHARES));
+
+	}
 
 }
