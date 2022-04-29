@@ -1,4 +1,5 @@
 package Tests;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import junit.framework.Assert;
 public class SecuritiesManagerTest extends BaseSecuritiesTest {
 
 	@Test
-	public void testAscendingSortByPrice() {
+	public void sortedSecuritiesByPriceAsc() {
 		List<Securities> result = securitiesManager.ascendingSortByPrice(testStockMarket);
 		assertEquals(5d, result.get(0).getPrice());
 		assertEquals(10d, result.get(1).getPrice());
@@ -27,7 +28,7 @@ public class SecuritiesManagerTest extends BaseSecuritiesTest {
 	}
 
 	@Test
-	public void testDescendingSortByPrice() {
+	public void sortedSecuritiesByPriceDesc() {
 		List<Securities> result = securitiesManager.descendingSortByPrice(testStockMarket);
 		assertEquals(5d, result.get(3).getPrice());
 		assertEquals(10d, result.get(2).getPrice());
@@ -36,16 +37,23 @@ public class SecuritiesManagerTest extends BaseSecuritiesTest {
 	}
 
 	@Test
-	public void testAscendingSortByCompanyName() {
+	public void sortedSecuritiesByCompanyNameAsc() {
 		List<Securities> result = securitiesManager.ascendingSortByCompanyName(testStockMarket);
-		assertEquals("Apple", result.get(0).getCompanyName());
-		assertEquals("Mercedes", result.get(1).getCompanyName());
-		assertEquals("Samsung", result.get(2).getCompanyName());
-		assertEquals("Tesla", result.get(3).getCompanyName());
+		List<String>expectedData = null;
+		List<String> actualData = null;
+		actualData.add("Apple");
+		actualData.add("Mercedes");
+		actualData.add("Samsung");
+		actualData.add("Tesla");
+		for(int securities = 0; securities< testStockMarket.getAvailiableSecurities().size(); securities++) {
+			expectedData.add(testStockMarket.getAvailiableSecurities().get(securities).getCompanyName());
+			
+		}
+		assertEquals(actualData, expectedData);
 	}
 
 	@Test
-	public void testDescendingSortByCompanyName() {
+	public void sortedSecuritiesByCompanyNameDesc() {
 		List<Securities> result = securitiesManager.descendingSortByCompanyName(testStockMarket);
 		assertEquals("Apple", result.get(3).getCompanyName());
 		assertEquals("Mercedes", result.get(2).getCompanyName());
