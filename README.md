@@ -1,6 +1,4 @@
 # JavaLabs
-Перетворити проект з кодом 2-3 роботи таким чином, щоб його збірку можна було виконувати з-за допомогою  maven. 
-При цьому варто зробити команду merge попередніх робіт в master
-Важливо: збірку проекту слід виконувати з консолі командою mvn clean package
-
-Згенерувати pom.xml можна з використанням команди maven (слід виконувати з консолі)
+- Create a regex pattern to replace all words, that beging with 3 consontans, with predefined word.
+- Create Test for this Regex pattern
+- Content to be tested should be entered with terminal input
