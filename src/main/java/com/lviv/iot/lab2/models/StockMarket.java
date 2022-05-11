@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StockMarket {
 	private String location;
-	private ArrayList<Securities> availiableSecurities = new ArrayList<Securities>();
+	private ArrayList<Securities> availiableSecurities = new ArrayList<>();
 	
 	public List<Securities> addSecurities(Securities s) {
 		availiableSecurities.add(s);
@@ -22,6 +22,11 @@ public class StockMarket {
 	
 	
 	
+public void setLocation(String location) {
+		this.location = location;
+	}
+
+
 public void showPrice() {
 		
 	}
