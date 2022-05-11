@@ -56,15 +56,15 @@ public class SecuritiesManager{
 		return descendingSortedByCompanyName;
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
+	
+	
+	
+
+	
+	
+	
+	
+	
+
 

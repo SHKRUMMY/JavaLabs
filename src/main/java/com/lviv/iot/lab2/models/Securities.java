@@ -19,6 +19,10 @@ public abstract class Securities {
 		this.companyName = companyName;
 		}
 	
+	public String Represent() {
+		return "[Price =" + price + ", Due Date =" + dueDate + ",Buy Date =" + buyDate + ", Stocke Trend =" + stockTrend + ", Risk Level = " + riskLevel +
+				" , Company Name =" + companyName;
+	}
 
 	public Double getPrice() {
 		return price;
@@ -51,38 +55,70 @@ public abstract class Securities {
 	
 	
 
+//	public void setStockTrend(StockTrend stockTrend) {
+//		this.stockTrend = stockTrend;
+//	}
+//
+//
+//	public void setRiskLevel(RiskLevel riskLevel) {
+//		this.riskLevel = riskLevel;
+//	}
+//
+//
+//	public double sellSecurities() {
+//		return 0d;
+//		
+//	}
+//	
+//	public double buySecurities() {
+//		return 0d;
+//		
+//	}
+//
+//	
+//	public void setPrice(Double price) {
+//		this.price = price;
+//	}
 
-	public void setStockTrend(StockTrend stockTrend) {
-		this.stockTrend = stockTrend;
-	}
 
-
-	public void setRiskLevel(RiskLevel riskLevel) {
-		this.riskLevel = riskLevel;
-	}
-
-
-	public double sellSecurities() {
-		return 0d;
-		
+	
+	public String getHeaders() {
+		return "price	;  dueDate	;  buyDate	; stockTrend	;  riskLevel	;  companyName	";
 	}
 	
-	public double buySecurities() {
-		return 0d;
-		
+	public String toCSV() {
+		return String.format("%f; %d; %d; %s; %s; %s", getPrice(), getDueDate(), getBuyDate(), getStockTrend(), getRiskLevel(), getCompanyName());
 	}
-
 	
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-
-
-	@Override
-	public String toString() {
-		return "Securities [price=" + price + ", dueDate=" + dueDate + ", buyDate=" + buyDate + ", stockTrend="
-				+ stockTrend + ", riskLevel=" + riskLevel + ", companyName=" + companyName + "]";
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
+
